@@ -11,15 +11,17 @@ const Hero = (props) => {
   const [checked, setChecked] = useState(false);
   const [showComics, setShowComics] = useState(true);
   const hero = props.data.find((e) => e.name === props.match.params.name);
+
   const handleChange = (checked) => {
     !checked ? setChecked(true) : setChecked(false);
     checked ? setShowComics(true) : setShowComics(false);
   };
   useEffect(() => {
     if (hero) {
-      fetch(
-        `${hero.comics.collectionURI}?apikey=be0553adc33cf75595b3888e59c1b2b9`
-      )
+      let arr = hero.comics.collectionURI.split("");
+      arr.splice(4, 0, "s");
+      const url = arr.join("");
+      fetch(`${url}?apikey=be0553adc33cf75595b3888e59c1b2b9`)
         .then((data) => data.json())
         .then((data) => setComics(data.data.results));
     }

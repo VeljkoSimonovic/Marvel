@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./App.scss";
 import Footer from "./Footer/Footer";
 import Heroes from "./Heroes/Heroes";
@@ -14,7 +14,7 @@ function App() {
   const [team, setTeam] = useState(JSON.parse(localStorage.getItem("team")));
   useEffect(() => {
     fetch(
-      "http://gateway.marvel.com/v1/public/characters?apikey=be0553adc33cf75595b3888e59c1b2b9"
+      "https://gateway.marvel.com/v1/public/characters?apikey=be0553adc33cf75595b3888e59c1b2b9"
     )
       .then((data) => data.json())
       .then((data) => {
@@ -35,12 +35,14 @@ function App() {
   const removeFromTeam = (hero) => {
     setTeam(team.filter((e) => e.id !== hero.id));
   };
-
-  const filterData = (input) => {
-    setfilteredData(
-      data.filter((e) => e.name.toLowerCase().includes(input.toLowerCase()))
-    );
-  };
+  const filterData = useCallback(
+    (input) => {
+      setfilteredData(
+        data.filter((e) => e.name.toLowerCase().includes(input.toLowerCase()))
+      );
+    },
+    [data]
+  );
 
   return (
     <>

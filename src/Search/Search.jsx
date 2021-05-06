@@ -8,7 +8,7 @@ const Search = () => {
 
   useEffect(() => {
     filterData(input);
-  }, [input]);
+  }, [input, filterData]);
   return (
     <div className="searchdiv">
       <input
