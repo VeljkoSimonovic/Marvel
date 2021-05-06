@@ -1,0 +1,63 @@
+.teamDiv {
+  width: 20%;
+  padding: 5px;
+  border: 2px solid #a52a2a;
+  margin-top: 20px;
+  h1 {
+    text-align: center;
+    color: white;
+  }
+  .teamMember {
+    display: flex;
+    align-items: center;
+    margin: 1px;
+    border: 2px solid #a52a2a;
+    background-color: #31323b;
+    .teamMemberImgDiv {
+      position: relative;
+      .img {
+        display: block;
+      }
+      .img1 {
+        position: absolute;
+        display: block;
+        width: 100px;
+        height: 100px;
+        z-index: 2;
+        bottom: 0px;
+        opacity: 0;
+        &:hover {
+          opacity: 100;
+        }
+      }
+    }
+
+    .teamMemberName {
+      padding-left: 10px;
+      color: white;
+    }
+  }
+}
+@media only screen and (max-width: 1445px) {
+  .teamDiv {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .teamDiv {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .teamDiv {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 260px) {
+  .teamDiv {
+    .teamMember {
+      flex-direction: column;
+    }
+  }
+}

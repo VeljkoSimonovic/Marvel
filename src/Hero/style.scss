@@ -1,0 +1,112 @@
+.heroPage {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto 20px auto;
+  width: 90%;
+  padding: 20px;
+  .heroImg {
+    display: block;
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+  }
+  .heroDescDiv {
+    width: 60%;
+  }
+  h1 {
+    padding-left: 20px;
+    color: white;
+  }
+  .heroDesc {
+    padding-left: 20px;
+    color: white;
+  }
+  .comicsDiv {
+    border-top: 3px solid brown;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+    .switchAndComicDiv {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .comicDiv {
+      width: 13%;
+      margin-top: 10px;
+      .comicTitle {
+        color: white;
+      }
+      .comicPic {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        &:hover {
+          transform: scale(1.05);
+          transition: ease-in 0.2s;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 740px) {
+  .heroPage {
+    flex-direction: column;
+    .heroImg {
+      width: 100%;
+    }
+    .heroDescDiv {
+      width: 100%;
+    }
+    h1 {
+      padding: 0px;
+      color: white;
+    }
+    .heroDesc {
+      padding: 0px;
+      color: white;
+    }
+    .comicsDiv {
+      .comicDiv {
+        width: 30%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 520px) {
+  .heroPage {
+    h1 {
+      font-size: 24px;
+    }
+  }
+}
+@media only screen and (max-width: 520px) {
+  .heroPage {
+    .comicsDiv {
+      .comicDiv {
+        width: 47%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 320px) {
+  .heroPage {
+    .comicsDiv {
+      .comicDiv {
+        width: 100%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 250px) {
+  .heroPage {
+    h1 {
+      font-size: 18px;
+    }
+  }
+}

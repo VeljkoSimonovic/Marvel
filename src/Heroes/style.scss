@@ -1,0 +1,108 @@
+.articlesDiv {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  .heroesDiv {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    .heroDiv {
+      width: 23%;
+      border: 1px solid rgb(143, 130, 130);
+      margin: 20px 5px 20px 5px;
+      border: brown 2px solid;
+      background-color: #31323b;
+      .heroName {
+        text-align: center;
+        color: white;
+        font-weight: bold;
+      }
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        object-fit: contain;
+        border-top: brown 2px solid;
+        border-bottom: brown 2px solid;
+      }
+      .buttonDiv {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        button {
+          padding: 5px 10px 5px 10px;
+          border-radius: 10px;
+          display: block;
+          margin: 10px;
+          background-color: #a52a2a;
+          color: white;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1445px) and (min-width: 1201px) {
+  .articlesDiv {
+    .heroesDiv {
+      width: 70%;
+      .heroDiv {
+        width: 30%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 921px) {
+  .articlesDiv {
+    .heroesDiv {
+      width: 60%;
+      .heroDiv {
+        width: 47%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 920px) {
+  .articlesDiv {
+    flex-direction: column;
+    .heroesDiv {
+      width: 100%;
+      .heroDiv {
+        width: 23%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 740px) {
+  .articlesDiv {
+    .heroesDiv {
+      width: 100%;
+      .heroDiv {
+        width: 30%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 550px) {
+  .articlesDiv {
+    .heroesDiv {
+      width: 100%;
+      .heroDiv {
+        width: 47%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 405px) {
+  .articlesDiv {
+    .heroesDiv {
+      width: 100%;
+      .heroDiv {
+        width: 100%;
+      }
+    }
+  }
+}

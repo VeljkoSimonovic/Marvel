@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-image: url(../src/imgs/dark-honeycomb.png);
+  @font-face {
+    font-family: "robotolight";
+    src: url("./fonts/roboto-light-webfont.woff2") format("woff2"),
+      url("./fonts/roboto-light-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  font-family: "robotolight", Helvetica, sans-serif;
+}
